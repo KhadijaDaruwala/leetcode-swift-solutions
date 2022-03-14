@@ -7,8 +7,8 @@ class Solution {
             for i in 1...prices.count - 1{
                 if prices[i] < minValue {
                     minValue = prices[i]
-                }else if ((prices[i] - minValue) > maxProfit){
-                    maxProfit = prices[i] - minValue
+                } else {
+                    maxProfit = max(maxProfit, prices[i] - minValue)
                 }
             }
         }
